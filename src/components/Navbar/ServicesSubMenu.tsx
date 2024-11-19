@@ -2,15 +2,11 @@
 import Menu from "@mui/material/Menu";
 import Link from "next/link";
 
-type ServicesSubMenuPros = {
-  anchorEl: HTMLElement | null;
-  setAnchorEl: React.Dispatch<React.SetStateAction<HTMLElement | null>>;
-};
-
 export default function ServicesSubMenu({
   setAnchorEl,
   anchorEl,
-}: ServicesSubMenuPros) {
+  pathname,
+}: any) {
   const open = Boolean(anchorEl);
 
   const handleClose = () => {
@@ -29,16 +25,16 @@ export default function ServicesSubMenu({
         }}
       >
         <ul onClick={handleClose} className="p-2">
-          <li>
+          <li className={pathname == "/laboratory" ? "border-b-blue-600 border-b-2" : ""}>
             <Link href={"/laboratory"}>Laboratory</Link>
           </li>
-          <li>
+          <li className={pathname == "/childCare" ? "border-b-blue-600 border-b-2" : ""}>
             <Link href={"/childCare"}>Child Care</Link>
           </li>
-          <li>
+          <li className={pathname == "/education" ? "border-b-blue-600 border-b-2" : ""}>
             <Link href={"/education"}>Education</Link>
           </li>
-          <li>
+          <li className={pathname == "/healthPackage" ? "border-b-blue-600 border-b-2" : ""}>
             <Link href={"/healthPackage"}>Health Package</Link>
           </li>
         

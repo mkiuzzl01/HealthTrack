@@ -13,7 +13,6 @@ const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   const pathname = usePathname();
 
   const handleOpen = () => setOpen(true);
@@ -75,13 +74,13 @@ const Navbar = () => {
               open ? "" : "activeMenu"
             }`}
           >
-            <li>
+            <li className={pathname == "/" ? "border-b-blue-600 border-b-2" : ""}>
               <Link href="/">Home</Link>
             </li>
-            <li>
+            <li  className={pathname == "/about" ? "border-b-blue-600 border-b-2" : ""}>
               <Link href="/about">About</Link>
             </li>
-            <li>
+            <li className={pathname == "/doctors" ? "border-b-blue-600 border-b-2" : ""}>
               <Link href="/doctors">Doctors</Link>
             </li>
             <li>
@@ -95,14 +94,14 @@ const Navbar = () => {
                 Services
               </button>
             </li>
-            <li>
+            <li className={pathname == "/departments" ? "border-b-blue-600 border-b-2" : ""}>
               <Link href="/departments">Departments</Link>
             </li>
-            <li>
+            <li className={pathname == "/pharmacy" ? "border-b-blue-600 border-b-2" : ""}>
               <Link href="/pharmacy">Pharmacy</Link>
             </li>
-            <li>
-              <Link href={"/gallery"}>Gallery</Link>
+            <li className={pathname == "/gallery" ? "border-b-blue-600 border-b-2" : ""}>
+              <Link href="/gallery">Gallery</Link>
             </li>
           </ul>
         </div>
@@ -121,7 +120,7 @@ const Navbar = () => {
         </div>
       </div>
       <AppointmentModal open={isModalOpen} handleClose={handleModalClose} />{" "}
-      <ServicesSubMenu anchorEl={anchorEl} setAnchorEl={setAnchorEl} />
+      <ServicesSubMenu anchorEl={anchorEl} setAnchorEl={setAnchorEl} pathname={pathname}/>
     </div>
   );
 };

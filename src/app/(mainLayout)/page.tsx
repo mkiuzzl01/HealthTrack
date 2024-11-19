@@ -13,7 +13,6 @@ const page = () => {
     <div>
       <Banner></Banner>
       <ServicesStat></ServicesStat>
-  
       <Service></Service>
       <Consult />
       <Stat />

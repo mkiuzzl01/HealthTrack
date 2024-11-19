@@ -3,8 +3,6 @@ import { GiMedicines } from "react-icons/gi";
 import { TiMessages } from "react-icons/ti";
 import { ImLab } from "react-icons/im";
 import { SlBadge } from "react-icons/sl";
-import about_us_banner2 from "@public/assets/about/aboutus1-02.jpg";
-import Image from "next/image";
 
 const About = () => {
   const data = [
