@@ -1,0 +1,126 @@
+/* General container styling */
+.mission_container {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #bcd9f7, #ffffff);
+  font-family: "Arial", sans-serif;
+}
+
+/* Header styling */
+.header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+/* Cards container */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Individual card styling */
+.card {
+  position: relative;
+  max-width: 300px;
+  background: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  padding-top: 3.5rem;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Arrow Tail */
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 25px solid white;
+  z-index: 0;
+}
+
+/* Icon Container */
+.icon-container {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+/* Card title styling */
+.card h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem;
+  color: inherit;
+}
+
+/* Card description styling */
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.5rem 0 0;
+  line-height: 1.5;
+}
+
+/* Color Variants */
+.card-orange {
+  border-top: 5px solid orange;
+  background: #ffe8cc;
+  color: orange;
+}
+
+.card-orange::after {
+  border-top-color: orange;
+}
+
+.card-blue {
+  border-top: 5px solid blue;
+  background: #cce0ff;
+  color: blue;
+}
+
+.card-blue::after {
+  border-top-color: blue;
+}
+
+.card-purple {
+  border-top: 5px solid purple;
+  background: #ebccff;
+  color: purple;
+}
+
+.card-purple::after {
+  border-top-color: purple;
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 30px rgba(234, 211, 211, 0.2);
+}
