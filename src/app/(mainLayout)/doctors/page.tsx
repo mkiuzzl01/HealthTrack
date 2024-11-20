@@ -1,37 +1,43 @@
 import React from "react";
 import Specialists from "./__components/Specialists";
 import Form from "./__components/Form";
-import banner from "@public/assets/about/timeline-6.jpg";
+import banner from "@public/assets/doctors/bg-1.jpg";
 
-const page = () => {
+const Page = () => {
   return (
-    <div className="lg:w-3/4 m-auto pb-5">
-      <div
-        className="relative py-16 mb-10"
+    <div>
+      <section
+        className="w-full bg-no-repeat bg-fixed bg-top relative"
         style={{
-          backgroundImage: `url(${banner?.src})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${banner.src})`,
         }}
       >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center text-center space-y-8 px-4">
-          <h2 className="lg:text-4xl md:text-4xl text-3xl font-bold text-white uppercase">
-            Our Specialists
-          </h2>
-          <p className="text-lg text-gray-200 max-w-2xl">
-            We have all the professional specialists in our hospital
-          </p>
+        <div className="text-center space-y-4 p-24 text-white">
+          <h1 className="text-3xl lg:text-5xl font-bold">Our Expertise</h1>
+          <p className="text-2xl"> Explore our expertise doctors</p>
         </div>
-      </div>
-      <div className="flex flex-col lg:flex-row h-full">
-        <div className="lg:w-2/5">
+
+        {/* this is form */}
+        <div className="bg-white">
           <Form />
         </div>
-        <div className="lg:w-3/5 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:none]">
+      </section>
+      {/* section title */}
+      <section>
+        <div className="bg-white text-center p-10">
+          <h2 className="text-3xl font-semibold"> OUR SPECIALISTS</h2>
+          <p>We have all the professional specialists in our hospital</p>
+        </div>
+      </section>
+
+      {/* specialists section */}
+      <section>
+        <div className="lg:w-3/4 mx-auto">
           <Specialists />
         </div>
-      </div>
+      </section>
     </div>
   );
 };
 
-export default page;
+export default Page;
