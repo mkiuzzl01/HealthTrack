@@ -13,7 +13,7 @@ const Page = () => {
         }}
       >
         <div className="text-center space-y-4 p-24 text-white">
-          <h1 className="text-3xl lg:text-5xl font-bold">Our Expertise</h1>
+          <h1 className="text-3xl lg:text-5xl font-bold">Our Doctors</h1>
           <p className="text-2xl"> Explore our expertise doctors</p>
         </div>
 

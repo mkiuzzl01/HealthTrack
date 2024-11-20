@@ -20,27 +20,34 @@ const Form = () => {
           </div>
           <div className="mb-1">
             <label className="block text-gray-700 uppercase font-bold mb-2">
-              INSTITUTION
+              BRANCH
             </label>
-            <input
-              type="text"
-              className="w-full p-3 rounded-lg "
-              placeholder="Instruction"
-            />
+            <select name="" id="" className="w-full p-3 rounded-lg ">
+              <option value="" defaultChecked>
+                Select Branch
+              </option>
+              <option value="Dhanmondi">Dhanmondi</option>
+              <option value="Ghulshan">Ghulshan</option>
+              <option value="Bashundhara">Bashundhara</option>
+              <option value="Baridhara">Baridhara</option>
+            </select>
           </div>
           <div className="mb-1">
             <label className="block text-gray-700 uppercase font-bold mb-2">
               SPECIALTY
             </label>
+
             <input
               type="text"
               className="w-full p-3 rounded-lg "
-              placeholder="Specialty"
+              placeholder="Branch name"
             />
           </div>
         </div>
         <div className="mt-5">
-          <button className="uppercase bg-sky-400 px-4 py-2 font-bold hover:shadow-lg rounded-lg ">Search</button>
+          <button className="uppercase bg-sky-400 px-4 py-2 font-bold hover:shadow-lg rounded-lg ">
+            Search
+          </button>
         </div>
       </form>
     </div>

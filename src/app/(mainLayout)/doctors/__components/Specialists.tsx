@@ -35,6 +35,11 @@ const Specialists = () => {
       image: specialist3,
     },
     {
+      name: "Glenn",
+      specialty: "Family Physicians",
+      image: specialist1,
+    },
+    {
       name: "Linda Flores",
       specialty: "Gynecologists",
       image: specialist4,
@@ -43,6 +48,11 @@ const Specialists = () => {
       name: "Glenn Arredondo",
       specialty: "Family Physicians",
       image: specialist1,
+    },
+    {
+      name: "Linda Flores",
+      specialty: "Gynecologists",
+      image: specialist4,
     },
   ];
 
@@ -77,7 +87,7 @@ const Specialists = () => {
         {/* pagination */}
         <section>
           <div className="flex justify-center items-center my-5">
-            <button className="p-2 bg-gray-300 flex items-center">
+            <button className="p-2 bg-gray-300 flex items-center hover:bg-gray-400">
               {" "}
               <span className="p-1">
                 {" "}
@@ -88,11 +98,11 @@ const Specialists = () => {
             {specialists.map((item, index) => (
               <div key={index}>
                 <button className="bg-gray-300 p-2 rounded-full m-1">
-                  {index + 1}
+               {index+1}
                 </button>
               </div>
             ))}
-            <button className="p-2 bg-gray-300 flex items-center">
+            <button className="p-2 bg-gray-300 flex items-center hover:bg-gray-400">
               Next{" "}
               <span className="p-1">
                 {" "}
