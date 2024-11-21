@@ -71,24 +71,22 @@ const WhyChooseUs = () => {
           </div>
         </div>
       </div>
-      <div>
-        <div className="relative">
-          <Image
-            src={doctorTeamImg}
-            alt="Doctor Team"
-            className="rounded"
-            layout="responsive"
-            width={300}
-            height={200}
-          />
-          <div className="absolute bottom-4 right-4 bg-white p-4 rounded shadow-md text-center">
-            <h4 className="text-lg font-bold text-gray-800">
-              24/7 Hours Service
-            </h4>
-            <p className="mt-2 text-xl font-semibold text-[#0057B8]">
-              1-885-665-2024
-            </p>
-          </div>
+      <div className="relative">
+        <Image
+          src={doctorTeamImg}
+          alt="Doctor Team"
+          className="rounded"
+          layout="responsive"
+          width={300}
+          height={200}
+        />
+        <div className="absolute bottom-4 right-4 bg-white p-4 rounded shadow-md text-center">
+          <h4 className="text-lg font-bold text-gray-800">
+            24/7 Hours Service
+          </h4>
+          <p className="mt-2 text-xl font-semibold text-[#0057B8]">
+            1-885-665-2024
+          </p>
         </div>
       </div>
     </div>

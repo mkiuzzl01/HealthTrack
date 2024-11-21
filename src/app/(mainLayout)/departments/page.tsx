@@ -1,4 +1,4 @@
-import Department from '@/components/Department/Department';
+import Department from '@/app/(mainLayout)/departments/__components/Department';
 import React from 'react';
 
 const page = () => {

@@ -36,12 +36,15 @@ const Form = () => {
             <label className="block text-gray-700 uppercase font-bold mb-2">
               SPECIALTY
             </label>
-
-            <input
-              type="text"
-              className="w-full p-3 rounded-lg "
-              placeholder="Specialty"
-            />
+            <select name="" id="" className="w-full p-3 rounded-lg ">
+              <option value="" defaultChecked>
+                Select Branch
+              </option>
+              <option value="Hematology">Hematology</option>
+              <option value="Cardiology">Cardiology</option>
+              <option value="Neurology">Neurology</option>
+              <option value="Gastroenterology">Gastroenterology</option>
+            </select>
           </div>
         </div>
         <div className="mt-5">

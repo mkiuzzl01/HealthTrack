@@ -6,8 +6,10 @@ import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
 import { useRef } from "react";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const testName = [
   {
@@ -61,6 +63,16 @@ const Laboratory = () => {
             designed to provide accurate and detailed health insights.
           </p>
         </div>
+        <div className="flex justify-end">
+          <Link href="/laboratory">
+            <button className="flex items-center py-2 px-4 gap-2 text-blue-500 hover:text-blue-700 duration-300">
+              See more{" "}
+              <span>
+                <FaLongArrowAltRight />
+              </span>
+            </button>
+          </Link>
+        </div>
       </div>
       <Swiper
         spaceBetween={30}
@@ -98,6 +110,8 @@ const Laboratory = () => {
           <SwiperSlide key={index}>
             <div className="rounded-lg hover:shadow-lg transition-all duration-300">
               <Image
+                placeholder="blur"
+                blurDataURL={test?.image}
                 src={test?.image}
                 alt={test.testName}
                 width={300}

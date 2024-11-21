@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import img1 from "../../../public/assets/department-1.jpg";
-import img2 from "../../../public/assets/department-2.jpg";
-import img3 from "../../../public/assets/department-3.jpg";
-import img4 from "../../../public/assets/department-4.jpg";
-import img5 from "../../../public/assets/department-5.jpg";
-import img6 from "../../../public/assets/department-6.jpg";
-import img7 from "../../../public/assets/department-7.jpg";
-import img8 from "../../../public/assets/department-8.jpg";
+import img1 from "@public/assets/department-1.jpg";
+import img2 from "@public/assets/department-2.jpg";
+import img3 from "@public/assets/department-3.jpg";
+import img4 from "@public/assets/department-4.jpg";
+import img5 from "@public/assets/department-5.jpg";
+import img6 from "@public/assets/department-6.jpg";
+import img7 from "@public/assets/department-7.jpg";
+import img8 from "@public/assets/department-8.jpg";
 
 const Department = () => {
   const departments = [
