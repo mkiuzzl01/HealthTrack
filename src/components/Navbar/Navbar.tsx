@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import Link from "next/link";
 import LoginIcon from "@mui/icons-material/Login";
 import Image from "next/image";
@@ -25,16 +25,15 @@ const Navbar = () => {
     setAnchorEl(event.currentTarget);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
 
   return (
     <div
@@ -74,13 +73,23 @@ const Navbar = () => {
               open ? "" : "activeMenu"
             }`}
           >
-            <li className={pathname == "/" ? "border-b-blue-600 border-b-2" : ""}>
+            <li
+              className={pathname == "/" ? "border-b-blue-600 border-b-2" : ""}
+            >
               <Link href="/">Home</Link>
             </li>
-            <li  className={pathname == "/about" ? "border-b-blue-600 border-b-2" : ""}>
+            <li
+              className={
+                pathname == "/about" ? "border-b-blue-600 border-b-2" : ""
+              }
+            >
               <Link href="/about">About</Link>
             </li>
-            <li className={pathname == "/doctors" ? "border-b-blue-600 border-b-2" : ""}>
+            <li
+              className={
+                pathname == "/doctors" ? "border-b-blue-600 border-b-2" : ""
+              }
+            >
               <Link href="/doctors">Doctors</Link>
             </li>
             <li>
@@ -94,13 +103,25 @@ const Navbar = () => {
                 Services
               </button>
             </li>
-            <li className={pathname == "/departments" ? "border-b-blue-600 border-b-2" : ""}>
+            <li
+              className={
+                pathname == "/departments" ? "border-b-blue-600 border-b-2" : ""
+              }
+            >
               <Link href="/departments">Departments</Link>
             </li>
-            <li className={pathname == "/pharmacy" ? "border-b-blue-600 border-b-2" : ""}>
+            <li
+              className={
+                pathname == "/pharmacy" ? "border-b-blue-600 border-b-2" : ""
+              }
+            >
               <Link href="/pharmacy">Pharmacy</Link>
             </li>
-            <li className={pathname == "/gallery" ? "border-b-blue-600 border-b-2" : ""}>
+            <li
+              className={
+                pathname == "/gallery" ? "border-b-blue-600 border-b-2" : ""
+              }
+            >
               <Link href="/gallery">Gallery</Link>
             </li>
           </ul>
@@ -120,7 +141,11 @@ const Navbar = () => {
         </div>
       </div>
       <AppointmentModal open={isModalOpen} handleClose={handleModalClose} />{" "}
-      <ServicesSubMenu anchorEl={anchorEl} setAnchorEl={setAnchorEl} pathname={pathname}/>
+      <ServicesSubMenu
+        anchorEl={anchorEl}
+        setAnchorEl={setAnchorEl}
+        pathname={pathname}
+      />
     </div>
   );
 };

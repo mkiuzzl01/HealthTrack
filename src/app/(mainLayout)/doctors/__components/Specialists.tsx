@@ -5,8 +5,10 @@ import specialist2 from "@public/assets/team-2.jpg";
 import specialist3 from "@public/assets/team-3.jpg";
 import specialist4 from "@public/assets/team-4.jpg";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import Link from "next/link";
 
 interface type {
+  id:string;
   name: string;
   specialty: string;
   image: any;
@@ -14,21 +16,25 @@ interface type {
 
 const specialists: type[] = [
   {
+    id:"01",
     name: "Linda Flores",
     specialty: "Gynecologists",
     image: specialist4,
   },
   {
-    name: "Glenn Arredondo",
+    id:"02",
+    name: "Glenn Aredondo",
     specialty: "Family Physicians",
     image: specialist1,
   },
   {
+    id:"03",
     name: "Dorthy Winters",
     specialty: "Gastroenterologists",
     image: specialist2,
   },
   {
+    id:"04",
     name: "Christopher",
     specialty: "Medicine Specialists",
     image: specialist3,
@@ -54,8 +60,8 @@ const Specialists = () => {
                     />
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600">
-                      View Profile
+                    <button className="border-2 text-white hover:text-blue-500 px-4 py-2 rounded-md shadow-md ">
+                      <Link href={specialist?.id}>View Profile</Link>
                     </button>
                   </div>
                 </div>

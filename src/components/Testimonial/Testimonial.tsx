@@ -47,73 +47,85 @@ const data = [
 ];
 
 const Testimonials = () => {
-  const swiperRef = useRef(null); 
+  const swiperRef = useRef(null);
   return (
-    <div className="relative">
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={"auto"}
-        breakpoints={{
-          320: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 8,
-          slideShadows: true,
-        }}
-        modules={[EffectCoverflow]}
-        onSwiper={(swiper) => {
-          swiperRef.current = swiper;
-        }}
-        className="mySwiper"
-      >
-        {data.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="bg-white shadow-md rounded-lg p-6 text-center transition-transform duration-300 swiper-slide-content">
-              <div className="flex flex-row text-gray-500">
-              <SiComma></SiComma>
-              <SiComma></SiComma>
-              </div>
-              <p className="mb-4 text-gray-600 italic">{item?.testimonial}</p>
-              <div className="flex items-center justify-center space-x-4">
-                <Image
-                  src={item?.imageUrl}
-                  alt={item?.name}
-                  width={50}
-                  height={50}
-                  className="rounded-full"
-                />
-                <div>
-                  <h3 className="font-bold text-lg text-gray-800">
-                    {item?.name}
-                  </h3>
-                  <p className="text-sm text-gray-500">{item?.role}</p>
+    <div className="lg:w-3/4 mx-auto">
+      <div className="py-10 my-5 text-center bg-gradient-to-r from-white via-gray-200 to-white">
+        <h2 className="text-3xl text-blue-700 font-bold text-center mb-8">
+          What Our Clients Say
+        </h2>
+        <p>
+          We believe the best way to understand the value of our services is
+          through the voices of those who have experienced it firsthand. <br /> Here's
+          what our clients and partners have to say
+        </p>
+      </div>
+      <div className="relative">
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={"auto"}
+          breakpoints={{
+            320: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 8,
+            slideShadows: true,
+          }}
+          modules={[EffectCoverflow]}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          className="mySwiper"
+        >
+          {data.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-white shadow-md rounded-lg p-6 text-center transition-transform duration-300 swiper-slide-content">
+                <div className="flex flex-row text-gray-500">
+                  <SiComma></SiComma>
+                  <SiComma></SiComma>
+                </div>
+                <p className="mb-4 text-gray-600 italic">{item?.testimonial}</p>
+                <div className="flex items-center justify-center space-x-4">
+                  <Image
+                    src={item?.imageUrl}
+                    alt={item?.name}
+                    width={50}
+                    height={50}
+                    className="rounded-full"
+                  />
+                  <div>
+                    <h3 className="font-bold text-lg text-gray-800">
+                      {item?.name}
+                    </h3>
+                    <p className="text-sm text-gray-500">{item?.role}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className="flex justify-center gap-4 p-4">
-        <button
-          className="bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-400"
-          onClick={() => swiperRef.current?.slidePrev()} 
-        >
-          &#8592;
-        </button>
-        <button
-          className="bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-400"
-          onClick={() => swiperRef.current?.slideNext()}
-        >
-          &#8594;
-        </button>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div className="flex justify-center gap-4 p-4">
+          <button
+            className="bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-400"
+            onClick={() => swiperRef.current?.slidePrev()}
+          >
+            &#8592;
+          </button>
+          <button
+            className="bg-gray-300 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-400"
+            onClick={() => swiperRef.current?.slideNext()}
+          >
+            &#8594;
+          </button>
+        </div>
       </div>
     </div>
   );
