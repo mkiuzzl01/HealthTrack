@@ -1,6 +1,5 @@
 import React from "react";
 import Banner1 from "./__components/Banner1";
-// import About from "./__components/About";
 import Timeline from "./__components/Timeline";
 import MeetOurDoctors from "./__components/MeetOurDoctors";
 import Tips from "./__components/Tips";
@@ -12,7 +11,6 @@ const page = () => {
   return (
     <div>
         <Banner1></Banner1>
-        {/* <About></About> */}
         <Mission></Mission>
         <Timeline></Timeline>
         <MeetOurDoctors></MeetOurDoctors>

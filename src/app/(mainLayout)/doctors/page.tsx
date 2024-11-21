@@ -25,7 +25,7 @@ const Page = () => {
       {/* section title */}
       <section>
         <div className="bg-white text-center p-10">
-          <h2 className="text-3xl font-semibold"> OUR SPECIALISTS</h2>
+          <h2 className="text-3xl font-semibold uppercase"> OUR Expertise Doctors</h2>
           <p>We have all the professional specialists in our hospital</p>
         </div>
       </section>

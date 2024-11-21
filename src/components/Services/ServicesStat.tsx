@@ -28,7 +28,7 @@ const ServicesStat = () => {
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row gap-4 justify-center items-center">
+      <div className="flex flex-col lg:flex-row gap-4 justify-center">
         {servicesStat.map((item, index) => (
           <div key={index} className="flex items-center p-5 border-b-2 hover:border-blue-500 duration-300">
             <Image src={item.icon} alt={item.name} width={50} height={50}/>

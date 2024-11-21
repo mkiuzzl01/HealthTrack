@@ -2,6 +2,7 @@ import About from "@/components/About/About";
 import Banner from "@/components/Banner/Banner";
 import Consult from "@/components/Consult/Consult";
 import Contact from "@/components/Contact/Contact";
+import Laboratory from "@/components/Laboratory/Laboratory";
 import Service from "@/components/Services/Services";
 import ServicesStat from "@/components/Services/ServicesStat";
 import Stat from "@/components/Stat/Stat";
@@ -16,6 +17,7 @@ const page = () => {
       <Service></Service>
       <Consult />
       <Stat />
+      <Laboratory></Laboratory>
       <WhyChooseUs></WhyChooseUs>
       <Testimonials></Testimonials>
       <Contact></Contact>

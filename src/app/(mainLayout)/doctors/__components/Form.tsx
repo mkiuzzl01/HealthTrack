@@ -40,7 +40,7 @@ const Form = () => {
             <input
               type="text"
               className="w-full p-3 rounded-lg "
-              placeholder="Branch name"
+              placeholder="Specialty"
             />
           </div>
         </div>
