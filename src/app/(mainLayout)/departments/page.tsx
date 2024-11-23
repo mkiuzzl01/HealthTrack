@@ -1,12 +1,14 @@
-import Department from '@/app/(mainLayout)/departments/__components/Department';
-import React from 'react';
+import React from "react";
+import Header from "./__components/Header";
+import Department from "./__components/Department";
 
 const page = () => {
-    return (
-        <div>
-           <Department/>
-        </div>
-    );
-}
+  return (
+    <div >
+      <Header />
+      <Department />
+    </div>
+  );
+};
 
 export default page;

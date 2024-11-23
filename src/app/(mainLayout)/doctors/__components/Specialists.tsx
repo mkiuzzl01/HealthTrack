@@ -49,7 +49,7 @@ const Specialists = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6">
             {specialists.map((specialist, index) => (
               <div key={`${specialist.name}-${index}`} className="border-2">
-                <div className="group relative overflow-hidden ">
+                <div className="group relative overflow-hidden duration-150">
                   <div className="overflow-hidden">
                     <Image
                       src={specialist.image}
@@ -60,7 +60,7 @@ const Specialists = () => {
                     />
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="border-2 text-white hover:text-blue-500 px-4 py-2 rounded-md shadow-md ">
+                    <button className="border-2 text-white px-4 py-2 rounded hover:bg-indigo-600 duration-300">
                       <Link href={specialist?.id}>View Profile</Link>
                     </button>
                   </div>
@@ -75,7 +75,7 @@ const Specialists = () => {
         </section>
         {/* Pagination */}
         <section>
-          <div className="flex justify-center items-center gap-2 my-5">
+          <div className="flex justify-center items-center gap-2">
             <button className="p-2 bg-gray-300 flex items-center hover:bg-gray-400">
               <span className="p-1">
                 <FaArrowLeft />
