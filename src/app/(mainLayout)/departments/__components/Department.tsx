@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import img1 from "@public/assets/department-1.jpg";
 import img2 from "@public/assets/department-2.jpg";
@@ -71,20 +70,7 @@ const Department = () => {
   ];
 
   return (
-    <div className="lg:w-3/4 mx-auto lg:px-0 px-5 my-32">
-      {/* Section title */}
-      <section>
-        <div className="text-center p-10">
-          <h1 className="lg:text-3xl text-2xl uppercase">
-            Explore Our Specialized Departments
-          </h1>
-          <p>
-            Our hospital is home to a wide range of specialized departments
-            dedicated to providing exceptional healthcare services.
-          </p>
-        </div>
-      </section>
-      {/* Department cards */}
+    <div className="lg:w-3/4 mx-auto lg:px-0 px-5">
       <section>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {departments.map((department) => (
@@ -117,30 +103,30 @@ const Department = () => {
             </div>
           ))}
         </div>
-        {/* Pagination */}
-        <section>
-          <div className="flex justify-center items-center gap-2 my-3">
-            <button className="p-2 bg-gray-300 flex items-center hover:bg-gray-400">
-              <span className="p-1">
-                <FaArrowLeft />
-              </span>
-              Prev
-            </button>
-            {departments.map((item, index) => (
-              <div key={index}>
-                <button className="bg-gray-300 p-2 rounded-full m-1">
-                  {index + 1}
-                </button>
-              </div>
-            ))}
-            <button className="p-2 bg-gray-300 flex items-center hover:bg-gray-400">
-              Next
-              <span className="p-1">
-                <FaArrowRight />
-              </span>
-            </button>
-          </div>
-        </section>
+      </section>
+      {/* Pagination */}
+      <section>
+        <div className="flex justify-center items-center gap-2 my-10">
+          <button className="p-2 bg-gray-300 flex items-center hover:bg-gray-400">
+            <span className="p-1">
+              <FaArrowLeft />
+            </span>
+            Prev
+          </button>
+          {departments.map((item, index) => (
+            <div key={index}>
+              <button className="bg-gray-300 p-2 rounded-full m-1">
+                {index + 1}
+              </button>
+            </div>
+          ))}
+          <button className="p-2 bg-gray-300 flex items-center hover:bg-gray-400">
+            Next
+            <span className="p-1">
+              <FaArrowRight />
+            </span>
+          </button>
+        </div>
       </section>
     </div>
   );

@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import specialist1 from "@public/assets/team-1.jpg";
 import specialist2 from "@public/assets/team-2.jpg";
@@ -75,7 +74,7 @@ const Specialists = () => {
         </section>
         {/* Pagination */}
         <section>
-          <div className="flex justify-center items-center gap-2">
+          <div className="flex justify-center items-center gap-2 my-5">
             <button className="p-2 bg-gray-300 flex items-center hover:bg-gray-400">
               <span className="p-1">
                 <FaArrowLeft />

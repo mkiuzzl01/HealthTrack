@@ -2,7 +2,7 @@
 
 const Form = () => {
   return (
-    <div className="bg-slate-100 md:p-10 p-8  rounded-lg  md:w-3/4 mx-1 md:m-auto relative -top-20 z-10 shadow-lg">
+    <div className="bg-slate-300 w-full md:w-3/4 m-auto p-10 shadow-lg rounded-md relative bottom-16  left-0 right-0">
       <h3 className="text-2xl font-bold text-gray-800 mb-6">Find a doctor</h3>
 
       {/* input form */}
@@ -14,7 +14,7 @@ const Form = () => {
             </label>
             <input
               type="text"
-              className="w-full p-3 rounded-lg "
+              className="w-full p-3 rounded-lg border focus:border-blue-600 focus:outline-none"
               placeholder="Doctor's name"
             />
           </div>
@@ -22,7 +22,11 @@ const Form = () => {
             <label className="block text-gray-700 uppercase font-bold mb-2">
               BRANCH
             </label>
-            <select name="" id="" className="w-full p-3 rounded-lg ">
+            <select
+              name=""
+              id=""
+              className="w-full p-3 rounded-lg border focus:border-blue-600 focus:outline-none"
+            >
               <option value="" defaultChecked>
                 Select Branch
               </option>
@@ -36,7 +40,11 @@ const Form = () => {
             <label className="block text-gray-700 uppercase font-bold mb-2">
               SPECIALTY
             </label>
-            <select name="" id="" className="w-full p-3 rounded-lg ">
+            <select
+              name=""
+              id=""
+              className="w-full p-3 rounded-lg border focus:border-blue-600 focus:outline-none"
+            >
               <option value="" defaultChecked>
                 Select Branch
               </option>
