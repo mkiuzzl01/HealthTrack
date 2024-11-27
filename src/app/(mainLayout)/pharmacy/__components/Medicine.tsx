@@ -39,6 +39,16 @@ const medicines = [
   },
   {
     id: "04",
+    name: "Amoxicillin",
+    description:
+      "A broad-spectrum antibiotic used to treat bacterial infections such as ear infections, respiratory tract infections, and UTIs.",
+    image: image3,
+    price: {
+      packPrice: 8.5,
+    },
+  },
+  {
+    id: "05",
     name: "Cetirizine",
     description:
       "An antihistamine used to treat allergies, hay fever, and cold-related symptoms such as a runny nose and itchy eyes.",
@@ -48,7 +58,7 @@ const medicines = [
     },
   },
   {
-    id: "05",
+    id: "06",
     name: "Metformin",
     description:
       "An oral diabetes medication used to control blood sugar levels in individuals with type 2 diabetes.",
@@ -58,7 +68,7 @@ const medicines = [
     },
   },
   {
-    id: "06",
+    id: "07",
     name: "Salbutamol",
     description:
       "A bronchodilator for treating breathing problems like asthma and COPD. It relaxes airway muscles.",
@@ -68,7 +78,7 @@ const medicines = [
     },
   },
   {
-    id: "07",
+    id: "08",
     name: "Ranitidine",
     description:
       "Previously used for acid reflux and heartburn. Recalled in some regions; alternatives recommended.",

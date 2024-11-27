@@ -122,7 +122,7 @@ const Navbar = () => {
                 pathname == "/gallery" ? "border-b-blue-600 border-b-2" : ""
               }
             >
-              <Link href="/gallery">Gallery</Link>
+              <Link href="/event">Event</Link>
             </li>
           </ul>
         </div>

@@ -7,6 +7,7 @@ import Stat from "@/components/Stat/Stat";
 import Testimonials from "@/components/Testimonial/Testimonial";
 import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
 import Department from "@/components/Department/Department";
+import Emergency from "@/components/Emergency/Emergency";
 
 const page = () => {
   return (
@@ -18,6 +19,7 @@ const page = () => {
       <Stat />
       <Laboratory />
       <WhyChooseUs />
+      <Emergency></Emergency>
       <Testimonials />
       <Contact />
     </div>

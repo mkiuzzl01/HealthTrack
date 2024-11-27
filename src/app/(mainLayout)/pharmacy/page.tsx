@@ -10,7 +10,7 @@ const page = () => {
         <div
           className="bg-cover bg-center"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${banner.src})`,
+            backgroundImage:`linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${banner.src})`,
           }}
         >
           <div className="text-center space-y-4 text-white py-24">
