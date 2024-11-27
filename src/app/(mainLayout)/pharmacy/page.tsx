@@ -40,7 +40,7 @@ const page = () => {
 
       {/* medicine section */}
       <section>
-        <div className="lg:w-3/4 mx-auto">
+        <div className="mx-2 lg:mx-0">
           <Medicine />
         </div>
       </section>

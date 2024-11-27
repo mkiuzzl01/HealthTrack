@@ -5,9 +5,10 @@ import specialist3 from "@public/assets/team-3.jpg";
 import specialist4 from "@public/assets/team-4.jpg";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
+import Pagination from "@/utils/Pagination";
 
 interface type {
-  id:string;
+  id: string;
   name: string;
   specialty: string;
   image: any;
@@ -15,25 +16,25 @@ interface type {
 
 const specialists: type[] = [
   {
-    id:"01",
+    id: "01",
     name: "Linda Flores",
     specialty: "Gynecologists",
     image: specialist4,
   },
   {
-    id:"02",
+    id: "02",
     name: "Glenn Aredondo",
     specialty: "Family Physicians",
     image: specialist1,
   },
   {
-    id:"03",
+    id: "03",
     name: "Dorthy Winters",
     specialty: "Gastroenterologists",
     image: specialist2,
   },
   {
-    id:"04",
+    id: "04",
     name: "Christopher",
     specialty: "Medicine Specialists",
     image: specialist3,
@@ -73,29 +74,7 @@ const Specialists = () => {
           </div>
         </section>
         {/* Pagination */}
-        <section>
-          <div className="flex justify-center items-center gap-2 my-5">
-            <button className="p-2 bg-gray-300 flex items-center hover:bg-gray-400">
-              <span className="p-1">
-                <FaArrowLeft />
-              </span>
-              Prev
-            </button>
-            {specialists.map((item, index) => (
-              <div key={index}>
-                <button className="bg-gray-300 p-2 rounded-full m-1">
-                  {index + 1}
-                </button>
-              </div>
-            ))}
-            <button className="p-2 bg-gray-300 flex items-center hover:bg-gray-400">
-              Next
-              <span className="p-1">
-                <FaArrowRight />
-              </span>
-            </button>
-          </div>
-        </section>
+        <Pagination arr={specialists}></Pagination>
       </div>
     </section>
   );

@@ -8,6 +8,7 @@ import img6 from "@public/assets/department-6.jpg";
 import img7 from "@public/assets/department-7.jpg";
 import img8 from "@public/assets/department-8.jpg";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Pagination from "@/utils/Pagination";
 
 const Department = () => {
   const departments = [
@@ -81,7 +82,7 @@ const Department = () => {
               <Image
                 src={department.image}
                 alt={department.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover group-hover:scale-110 duration-300 transition-transform"
                 layout="responsive"
                 width={150}
                 height={150}
@@ -105,29 +106,7 @@ const Department = () => {
         </div>
       </section>
       {/* Pagination */}
-      <section>
-        <div className="flex justify-center items-center gap-2 my-10">
-          <button className="p-2 bg-gray-300 flex items-center hover:bg-gray-400">
-            <span className="p-1">
-              <FaArrowLeft />
-            </span>
-            Prev
-          </button>
-          {departments.map((item, index) => (
-            <div key={index}>
-              <button className="bg-gray-300 p-2 rounded-full m-1">
-                {index + 1}
-              </button>
-            </div>
-          ))}
-          <button className="p-2 bg-gray-300 flex items-center hover:bg-gray-400">
-            Next
-            <span className="p-1">
-              <FaArrowRight />
-            </span>
-          </button>
-        </div>
-      </section>
+     <Pagination arr={departments}></Pagination>
     </div>
   );
 };
