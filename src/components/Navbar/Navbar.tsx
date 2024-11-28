@@ -122,7 +122,14 @@ const Navbar = () => {
                 pathname == "/gallery" ? "border-b-blue-600 border-b-2" : ""
               }
             >
-              <Link href="/event">Event</Link>
+              <Link
+                className={
+                  pathname == "/event" ? "border-b-blue-600 border-b-2" : ""
+                }
+                href="/event"
+              >
+                Event
+              </Link>
             </li>
           </ul>
         </div>

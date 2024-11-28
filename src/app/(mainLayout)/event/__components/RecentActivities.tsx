@@ -12,6 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 import { useRef } from "react";
+import Link from "next/link";
 
 const activities = [
   {
@@ -138,9 +139,11 @@ const RecentActivities = () => {
               -translate-x-full group-hover:translate-x-0 
               transition-all duration-1000 rounded-s-lg"
                 >
-                  <button className="outline outline-offset-2 outline-1  text-white py-2 px-4 rounded-md  transition-colors hover:bg-blue-500">
-                    View
-                  </button>
+                  <Link href={`view-details/${activity.id}`}>
+                    <button className="outline outline-offset-2 outline-1  text-white py-2 px-4 rounded-md  transition-colors hover:bg-blue-500">
+                      View
+                    </button>
+                  </Link>
                 </div>
               </div>
               <div className="lg:w-1/2 w-full">

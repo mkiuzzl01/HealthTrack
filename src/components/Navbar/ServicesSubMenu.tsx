@@ -28,8 +28,14 @@ export default function ServicesSubMenu({
           <li className={pathname == "/laboratory" ? "border-b-blue-600 border-b-2" : ""}>
             <Link href={"/laboratory"}>Laboratory</Link>
           </li>
+          <li className={pathname == "/bloodBank" ? "border-b-blue-600 border-b-2" : ""}>
+            <Link href={"/bloodBank"}>Blood Bank</Link>
+          </li>
           <li className={pathname == "/childCare" ? "border-b-blue-600 border-b-2" : ""}>
             <Link href={"/childCare"}>Child Care</Link>
+          </li>
+          <li className={pathname == "/oldAgeCare" ? "border-b-blue-600 border-b-2" : ""}>
+            <Link href={"/oldAgeCare"}>OldAge Care</Link>
           </li>
           <li className={pathname == "/education" ? "border-b-blue-600 border-b-2" : ""}>
             <Link href={"/education"}>Education</Link>
