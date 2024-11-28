@@ -153,16 +153,12 @@ const Gallery: React.FC = () => {
               >
                 &times;
               </button>
-
-              {/* Previous Button */}
               <button
                 className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white text-2xl bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center"
                 onClick={handlePrevious}
               >
                 &#8592;
               </button>
-
-              {/* Next Button */}
               <button
                 className="absolute top-1/2 right-2 transform -translate-y-1/2 text-white text-2xl bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center"
                 onClick={handleNext}
