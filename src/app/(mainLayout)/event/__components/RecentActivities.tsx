@@ -98,20 +98,20 @@ const RecentActivities = () => {
             spaceBetween: 10,
           },
           640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+            slidesPerView: 1,
+            spaceBetween: 10,
           },
           768: {
-            slidesPerView: 3,
-            spaceBetween: 25,
+            slidesPerView: 1,
+            spaceBetween: 10,
           },
           1024: {
-            slidesPerView: 4,
-            spaceBetween: 30,
+            slidesPerView: 2,
+            spaceBetween: 10,
           },
           1280: {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 2,
+            spaceBetween: 20,
           },
         }}
         modules={[Navigation, Pagination, FreeMode]}
@@ -124,22 +124,32 @@ const RecentActivities = () => {
       >
         {activities.map((activity, index) => (
           <SwiperSlide key={index}>
-            <div className="w-full min-h-96 flex flex-col items-center justify-between border-2 p-2 rounded-lg">
-              <div>
+            <div className="w-full flex flex-row justify-between p-2">
+              <div className="lg:w-1/2 h-72  relative group">
                 <Image
                   src={activity?.image}
                   alt={activity.title}
-                  className="w-full h-52 rounded-md object-cover"
+                  className="w-full h-72 object-cover rounded-s-lg"
                 />
-                <h3 className="text-lg font-bold mb-2">{activity.title}</h3>
-                <p className="text-sm text-gray-600 mb-4 line-clamp-3">
-                  {activity.description}
-                </p>
+                <div
+                  className="absolute inset-0 bg-blue-500 bg-opacity-50 
+              flex flex-col justify-center items-center text-center 
+              p-4 opacity-0 group-hover:opacity-100 
+              -translate-x-full group-hover:translate-x-0 
+              transition-all duration-1000 rounded-s-lg"
+                >
+                  <button className="outline outline-offset-2 outline-1  text-white py-2 px-4 rounded-md  transition-colors hover:bg-blue-500">
+                    View
+                  </button>
+                </div>
               </div>
-              <div className="w-full">
-                <button className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors">
-                  Take Test
-                </button>
+              <div className="lg:w-1/2">
+                <div className="bg-gray-200 rounded-r-full border-r-4 border-blue-400 p-4">
+                  <h3 className="text-lg font-bold mb-2">{activity.title}</h3>
+                  <p className="text-sm text-gray-600 mb-4 line-clamp-3">
+                    {activity.description}
+                  </p>
+                </div>
               </div>
             </div>
           </SwiperSlide>

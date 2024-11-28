@@ -6,8 +6,8 @@ import Publication from "./Publication";
 const Program = () => {
   return (
     <div>
-      <div className="text-center">
-        <h1 className="text-2xl">Recent activities, We are!</h1>
+      <div className="py-10 my-5 text-center bg-gradient-to-r from-white via-gray-200 to-white">
+        <h1 className="text-2xl font-bold">Recent activities, We are!</h1>
         <p>
           Participate in hands-on workshops to develop new skills and explore
           innovative tools and methodologies.
@@ -18,7 +18,7 @@ const Program = () => {
         <RecentActivities></RecentActivities>
       </div>
       {/* this is gallery, We connected! */}
-      <div className="text-center">
+      <div className="py-10 my-5 text-center bg-gradient-to-r from-white via-gray-200 to-white">
         <h1 className="text-2xl">Gallery,We connected!</h1>
         <p>
           Engage in a thought-provoking conversation as experts discuss trends,
@@ -29,7 +29,7 @@ const Program = () => {
         <Gallery></Gallery>
       </div>
       {/* this is our publication */}
-      <div className="text-center">
+      <div className="py-10 my-5 text-center bg-gradient-to-r from-white via-gray-200 to-white">
         <h1 className="text-2xl">Publication,We Happiness!</h1>
         <p>
           Engage in a thought-provoking conversation as experts discuss trends,

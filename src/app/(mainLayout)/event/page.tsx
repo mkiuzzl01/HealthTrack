@@ -23,7 +23,7 @@ const page = () => {
       </div>
 
       {/* this program section */}
-      <div>
+      <div className="lg:w-3/4 m-auto">
         <Program></Program>
       </div>
     </div>
