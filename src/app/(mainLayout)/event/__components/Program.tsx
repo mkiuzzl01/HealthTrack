@@ -19,7 +19,7 @@ const Program = () => {
       </div>
       {/* this is gallery, We connected! */}
       <div className="py-10 my-5 text-center bg-gradient-to-r from-white via-gray-200 to-white">
-        <h1 className="text-2xl">Gallery,We connected!</h1>
+        <h1 className="text-2xl font-bold">Gallery,We connected!</h1>
         <p>
           Engage in a thought-provoking conversation as experts discuss trends,
           challenges, and opportunities in the industry.
@@ -30,7 +30,7 @@ const Program = () => {
       </div>
       {/* this is our publication */}
       <div className="py-10 my-5 text-center bg-gradient-to-r from-white via-gray-200 to-white">
-        <h1 className="text-2xl">Publication,We Happiness!</h1>
+        <h1 className="text-2xl font-bold">Publication,We Happiness!</h1>
         <p>
           Engage in a thought-provoking conversation as experts discuss trends,
           challenges, and opportunities in the industry.

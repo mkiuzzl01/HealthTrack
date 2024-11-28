@@ -125,7 +125,7 @@ const RecentActivities = () => {
         {activities.map((activity, index) => (
           <SwiperSlide key={index}>
             <div className="w-full flex flex-row justify-between p-2">
-              <div className="lg:w-1/2 h-72  relative group">
+              <div className="lg:w-1/2 w-full h-72  relative group">
                 <Image
                   src={activity?.image}
                   alt={activity.title}
@@ -143,7 +143,7 @@ const RecentActivities = () => {
                   </button>
                 </div>
               </div>
-              <div className="lg:w-1/2">
+              <div className="lg:w-1/2 w-full">
                 <div className="bg-gray-200 rounded-r-full border-r-4 border-blue-400 p-4">
                   <h3 className="text-lg font-bold mb-2">{activity.title}</h3>
                   <p className="text-sm text-gray-600 mb-4 line-clamp-3">
