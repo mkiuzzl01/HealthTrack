@@ -11,8 +11,9 @@ import image3 from "@public/assets/publication/image-3.jpg";
 import image4 from "@public/assets/publication/image-4.jpg";
 import image5 from "@public/assets/publication/image-5.jpg";
 import image6 from "@public/assets/publication/image-6.jpg";
-import { useRef } from "react"; 
-import "./Publications.module.css"
+import { useRef } from "react";
+import "./Publications.module.css";
+import Link from "next/link";
 
 const publications = [
   {
@@ -109,29 +110,31 @@ const Publication = () => {
       >
         {publications.map((publication, index) => (
           <SwiperSlide key={index}>
-            <div className="w-full flex flex-col justify-between">
-              <div className="w-full rounded-lg  relative group">
-                <Image
-                  src={publication?.image}
-                  alt={publication.title}
-                  className="w-full object-cover"
-                />
-                <div className="absolute right-3 -bottom-4  text-white py-2 px-4 rounded-md border-2 bg-blue-500">
-                  {publication?.date}
+            <Link key={index} href={`view_details/${publication?.id}`}>
+              <div className="w-full flex flex-col justify-between overflow-hidden">
+                <div className="w-full rounded-lg relative group">
+                  <Image
+                    src={publication?.image}
+                    alt={publication.title}
+                    className="w-full object-cover hover:scale-110 duration-300"
+                  />
+                  <div className="absolute right-3 z-10 -bottom-4  text-white py-2 px-4 rounded-md border-2 bg-blue-500">
+                    {publication?.date}
+                  </div>
+                </div>
+                <div className="w-full border-r-4 border-b-4 card-content">
+                  <div className="bg-gray-200 p-4">
+                    <h3 className="text-lg font-bold mb-2 hover:text-blue-500">
+                      {publication.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-4 line-clamp-3">
+                      {publication.description}
+                    </p>
+                    <div className="card-content"></div>
+                  </div>
                 </div>
               </div>
-              <div className="w-full border-r-4 border-b-4 card-content">
-                <div className="bg-gray-200 p-4">
-                  <h3 className="text-lg font-bold mb-2">
-                    {publication.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-4 line-clamp-3">
-                    {publication.description}
-                  </p>
-                  <div className="card-content"></div>
-                </div>
-              </div>
-            </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
